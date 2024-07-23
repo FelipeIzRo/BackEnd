@@ -22,7 +22,7 @@ COPY nginx.conf.local /etc/nginx/nginx.conf
 WORKDIR /var/www/
 
 #Before run composer install for ProductsController.php
-RUN composer require symfony/serializer
+# RUN composer require symfony/serializer
 
 RUN composer require lexik/jwt-authentication-bundle
 # For Unit test
