@@ -1,0 +1,24 @@
+index:
+   path: /
+   controller: App\Controller\ProductosController::index
+   methods: ['GET']
+
+create:
+   path: /create
+   controller: App\Controller\ProductosController::create
+   methods: ['POST']
+
+showOne:
+   path: /showOne/{id}
+   controller: App\Controller\ProductosController::showOne
+   methods: ['GET']
+
+delete:
+   path: /delete/{id}
+   controller: App\Controller\ProductosController::delete
+   methods: ['DELETE']
+
+modify:
+  path: /modify/{id}
+  controller: App\Controller\ProductosController::modify
+  methods: ['PUT']

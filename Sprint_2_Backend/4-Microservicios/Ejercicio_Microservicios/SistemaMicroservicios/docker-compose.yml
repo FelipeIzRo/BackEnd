@@ -1,0 +1,81 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/html:/usr/local/apache2/htdocs
+    networks:
+      - backend
+
+  usuarios:
+    build: ./usuarios
+    volumes:
+      - ./usuarios:/app
+    ports:
+      - "5000:5000"
+    networks:
+      - backend
+
+  bbdd:
+    image: mysql:latest
+    volumes:
+      - ./bbdd:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: tienda_online
+      MYSQL_ROOT_PASSWORD: password      
+    networks:
+      backend:
+        aliases:
+          - mysql
+
+  gestor_bbdd:
+    build: ./gestor_bbdd
+    volumes:
+      - ./gestor_bbdd:/app
+    ports:
+      - "5004:5000"
+    networks:
+      - backend
+      
+  pagos:
+    build: ./pagos
+    volumes:
+      - ./pagos:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+
+  pedidos:
+    build: ./pedidos
+    volumes:
+      - ./pedidos:/app
+    ports:
+      - "5001:5000"
+    networks:
+      - backend
+
+  apigateway:
+    build: ./apigateway
+    volumes:
+      - ./apigateway:/app
+    ports:
+      - "5002:5000"
+    networks:
+      - backend
+
+  recomendaciones:
+    build: ./recomendaciones
+    volumes:
+      - ./recomendaciones:/app
+    ports:
+      - "5003:5000"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

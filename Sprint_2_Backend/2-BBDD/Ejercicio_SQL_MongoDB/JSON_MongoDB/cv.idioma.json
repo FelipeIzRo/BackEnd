@@ -1,0 +1,12 @@
+[{
+  "_id": "es",
+  "nombre": "Español"
+},
+{
+  "_id": "en",
+  "nombre": "ingles"
+},
+{
+  "_id": "it",
+  "nombre": "italiano"
+}]

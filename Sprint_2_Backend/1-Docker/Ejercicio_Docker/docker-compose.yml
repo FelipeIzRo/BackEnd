@@ -1,0 +1,31 @@
+services:
+  python:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    environment:
+      PYTHON_DB_HOST: mysql
+      PYTHON_DB_USER: root
+      PYTHON_DB_PASSWORD: password
+      PYTHON_DB_NAME: todo_app
+    depends_on:
+      - mysql
+    networks:
+      - todo_lan
+  
+  mysql:
+    image: mysql:8.0.36    
+    volumes:
+      - ./MySQL:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: todo_app
+      MYSQL_ROOT_PASSWORD: password      
+    networks:
+      todo_lan:
+        aliases:
+          - mysql
+
+networks:
+  todo_lan:

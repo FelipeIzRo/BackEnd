@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6633c42d6550719d6e899d1e"
+  },
+  "id_candidato": "662be359c85d52e7db935bf2",
+  "entidad": "IES Gaspar Melchor de Jovellanos",
+  "tipo_formacion": "DAM",
+  "anio": "2023",
+  "descripcion": "Desarrollo de apps multiplataforma"
+}]

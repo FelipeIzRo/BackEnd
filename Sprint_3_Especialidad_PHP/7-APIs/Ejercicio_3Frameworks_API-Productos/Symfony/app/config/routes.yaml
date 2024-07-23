@@ -1,0 +1,13 @@
+# index:
+#    path: /
+#    controller: App\Controller\ProductosController::index
+
+#    path: /create
+#    controller: App\Controller\ProductosController::create
+
+#    path: /showOne/{id}
+#    controller: App\Controller\ProductosController::showOne
+
+#    path: /delete/{id}
+#    controller: App\Controller\ProductosController::delete
+

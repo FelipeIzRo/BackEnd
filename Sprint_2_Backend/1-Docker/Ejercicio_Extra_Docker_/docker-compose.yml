@@ -1,0 +1,58 @@
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    environment:
+      PYTHON_DB_HOST: mysql
+      PYTHON_DB_USER: root
+      PYTHON_DB_PASSWORD: password
+      PYTHON_DB_NAME: todo_app
+    depends_on:
+      - mysql
+      - prometheus
+    networks:
+      - todo_lan
+
+  mysql:
+    image: mysql:8.0.36    
+    volumes:
+      - ./MySQL:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: todo_app
+      MYSQL_ROOT_PASSWORD: password      
+    networks:
+      todo_lan:
+        aliases:
+          - mysql
+
+  prometheus:
+    image: prom/prometheus:v2.35.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    networks:
+      - todo_lan
+      
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=password
+      - GF_SECURITY_ADMIN_USER=admin
+    networks:
+      - todo_lan 
+
+networks:
+  todo_lan:
+

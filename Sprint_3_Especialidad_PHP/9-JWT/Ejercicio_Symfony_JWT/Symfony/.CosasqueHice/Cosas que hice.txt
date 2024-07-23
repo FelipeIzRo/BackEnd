@@ -1,0 +1,4 @@
+Video que explica como usar el JWT
+https://www.youtube.com/watch?v=ZE6oqgp2j4w  //Este es para version 5.3 no m esirve
+
+https://www.youtube.com/watch?v=PxToeu4ySxU //symfony 5 es la que usa

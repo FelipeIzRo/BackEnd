@@ -1,0 +1,9 @@
+index:
+   path: /
+   controller: App\Controller\EventosController::index
+eventos_show:
+   path: /eventos/{id}
+   controller: App\Controller\EventosController::show
+evento_create:
+   path: /eventos/create
+   controller: App\Controller\EventosController::create

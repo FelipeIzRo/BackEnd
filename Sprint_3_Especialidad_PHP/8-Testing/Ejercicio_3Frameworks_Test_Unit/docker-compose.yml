@@ -1,0 +1,103 @@
+version: '3.7'
+networks:
+  3Frameworks-network:
+    internal: false
+# volumes:
+#   SymfonyMysqlVolume:
+#     external: true
+services:
+  backend-symfony:
+    image: action-learning-symfony
+    depends_on:
+      - mysql
+    networks:
+      - 3Frameworks-network
+    ports:
+      - target: 8081
+        published: 84
+        protocol: tcp
+        mode: host
+    environment:
+      - APP_ENV=dev
+      - APP_SECRET=thisisnotasecret
+      - APP_DEBUG=true
+      - DATABASE_URL=mysql://app_user:982hhfn9i24ugh925hg9235thrg39w28014t08hij@3Frameworks-mysql_test:3306/3Frameworks_db
+    build:
+      context: ./Symfony
+      network: host
+    volumes:
+      - type: bind
+        source: ./Symfony/app
+        target: /var/www
+
+  backend-Laravel:
+    image: action-learning-laravel
+    depends_on:
+      - mysql
+    networks:
+      - 3Frameworks-network
+    ports:
+      - target: 8081
+        published: 85
+        protocol: tcp
+        mode: host
+    environment:
+      - APP_ENV=dev
+      - APP_SECRET=thisisnotasecret
+      - APP_DEBUG=true
+      - DATABASE_URL=mysql://app_user:982hhfn9i24ugh925hg9235thrg39w28014t08hij@3Frameworks-mysql_test:3306/3Frameworks_db
+    build:
+      context: ./Laravel
+      network: host
+    volumes:
+      - ./Laravel:/var/www/html  # Monta el directorio actual en /var/www/html dentro del contenedor
+
+  backend-Codeigniter:
+    image: problema-codeigniter
+    depends_on:
+      - mysql
+    networks:
+      - 3Frameworks-network
+    ports:
+      - target: 8081
+        published: 86
+        protocol: tcp
+        mode: host
+    environment:
+      - APP_ENV=dev
+      - APP_SECRET=thisisnotasecret
+      - APP_DEBUG=true
+      - DATABASE_URL=mysql://app_user:982hhfn9i24ugh925hg9235thrg39w28014t08hij@3Frameworks-mysql_test:3306/3Frameworks_db
+    build:
+      context: ./Codeigniter
+      network: host
+    volumes:
+      - type: bind
+        source: ./Codeigniter
+        target: /var/www/html
+
+  mysql:
+    container_name: 3Frameworks-mysql_test
+    networks:
+      - 3Frameworks-network
+    image: mysql:8.0.28
+    environment:
+      MYSQL_ROOT_PASSWORD: Lift-extract-anthony-92
+      MYSQL_DATABASE: 3Frameworks_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: 982hhfn9i24ugh925hg9235thrg39w28014t08hij
+    ports:
+      - "3307:3306"
+    expose:
+      - '3306'
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      # - ./SymfonyMysqlVolume:/var/lib/mysql
+
+  adminer:
+    container_name: adminer_test
+    networks:
+      - 3Frameworks-network
+    image: adminer
+    ports:
+      - "8082:8080"

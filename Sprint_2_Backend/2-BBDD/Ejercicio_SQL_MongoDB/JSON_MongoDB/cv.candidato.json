@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "662be359c85d52e7db935bf2"
+  },
+  "nombre": "Felipe",
+  "apellidos": "Izquierdo Romero",
+  "avatar": "",
+  "skills": [
+    {
+      "_id": "php",
+      "nombre": "PHP",
+      "nivel": "20"
+    },
+    {
+      "_id": "js",
+      "nombre": "JavaScript",
+      "nivel": "50"
+    },
+    {
+      "_id": "sql",
+      "nombre": "SQL",
+      "nivel": "76"
+    },
+    {
+      "_id": "java",
+      "nombre": "Java",
+      "nivel": "80"
+    },
+    {
+      "_id": "python",
+      "nombre": "Python",
+      "nivel": "85"
+    }
+  ],
+  "idiomas": {
+    "_id": "es",
+    "nombre": "español"
+  }
+},
+{
+  "_id": {
+    "$oid": "6630aa4d2996b0511c43eb70"
+  },
+  "nombre": "Lucia",
+  "apellidos": "Marticorena Vidal",
+  "avatar": "",
+  "skills": [
+    {
+      "_id": "php",
+      "nombre": "PHP",
+      "nivel": "92"
+    },
+    {
+      "_id": "js",
+      "nombre": "JavaScript",
+      "nivel": "59"
+    },
+    {
+      "_id": "sql",
+      "nombre": "SQL",
+      "nivel": "93"
+    },
+    {
+      "_id": "java",
+      "nombre": "Java",
+      "nivel": "29"
+    },
+    {
+      "_id": "python",
+      "nombre": "Python",
+      "nivel": "78"
+    }
+  ],
+  "idiomas": [
+    {
+      "_id": "es",
+      "nombre": "español"
+    },
+    {
+      "_id": "en",
+      "nombre": "ingles"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6633e9f76550719d6e899d45"
+  },
+  "nombre": "Felipe",
+  "apellidos": "Izquierdo Romero",
+  "avatar": "",
+  "skills": [
+    {
+      "_id": "php",
+      "nombre": "PHP",
+      "nivel": "20"
+    },
+    {
+      "_id": "js",
+      "nombre": "JavaScript",
+      "nivel": "50"
+    },
+    {
+      "_id": "sql",
+      "nombre": "SQL",
+      "nivel": "76"
+    },
+    {
+      "_id": "java",
+      "nombre": "Java",
+      "nivel": "80"
+    },
+    {
+      "_id": "python",
+      "nombre": "Python",
+      "nivel": "85"
+    }
+  ],
+  "idiomas": {
+    "_id": "es",
+    "nombre": "español"
+  },
+  "recomendadaciones": [
+    {
+      "recomendador": "Javier Ortiz Laguna",
+      "entidad": "IES Gaspar Melchor de Jovellanos",
+      "descripcion": "Alumno bueno en programacion",
+      "fecha": "20-05-2023"
+    }
+  ],
+  "estudios": [
+    {
+      "entidad": "IES Gaspar Melchor de Jovellanos",
+      "tipo_formacion": "DAM",
+      "anio": "2023",
+      "descripcion": "Desarrollo de aplicaciones multiplataforma"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6633ea726550719d6e899d46"
+  },
+  "nombre": "Lucia",
+  "apellidos": "Marticorena Vidal",
+  "avatar": "",
+  "skills": [
+    {
+      "_id": "php",
+      "nombre": "PHP",
+      "nivel": "92"
+    },
+    {
+      "_id": "js",
+      "nombre": "JavaScript",
+      "nivel": "59"
+    },
+    {
+      "_id": "sql",
+      "nombre": "SQL",
+      "nivel": "93"
+    },
+    {
+      "_id": "java",
+      "nombre": "Java",
+      "nivel": "29"
+    },
+    {
+      "_id": "python",
+      "nombre": "Python",
+      "nivel": "78"
+    }
+  ],
+  "idiomas": [
+    {
+      "_id": "es",
+      "nombre": "español"
+    },
+    {
+      "_id": "en",
+      "nombre": "ingles"
+    }
+  ],
+  "recomendadaciones": [
+    {
+      "recomendador": "Pablo Bercial",
+      "entidad": "IES Gaspar Melchor de Jovellanos",
+      "descripcion": "Alumna con grandes conocimientos",
+      "fecha": "15-05-2023"
+    }
+  ],
+  "estudios": [
+    {
+      "entidad": "IES Gaspar Melchor de Jovellanos",
+      "tipo_formacion": "DAW",
+      "anio": "2023",
+      "descripcion": "Desarrollo de aplicaciones web"
+    }
+  ]
+}]

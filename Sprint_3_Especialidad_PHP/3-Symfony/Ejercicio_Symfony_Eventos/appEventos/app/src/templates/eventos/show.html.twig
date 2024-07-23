@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detalles del Evento{% endblock %}
+
+{% block content %}
+    <h1>{{ evento.nombre }}</h1>
+    <p>Fecha: {{ evento.fecha|date('d-m-Y') }}</p>
+    <p>Hora: {{ evento.fecha|date('H:i') }}</p>
+    <p>Ubicación: {{ evento.ubicacion }}</p>
+    <p>Detalles: {{ evento.detalles }}</p>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('index') }}'">Volver a la lista</button>
+{% endblock %}

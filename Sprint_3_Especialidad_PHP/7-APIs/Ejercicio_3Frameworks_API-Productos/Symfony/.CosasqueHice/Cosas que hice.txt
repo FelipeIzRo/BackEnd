@@ -1,0 +1,4 @@
+Para usar SerializerInterface en el controlador
+
+composer require symfony/serializer
+

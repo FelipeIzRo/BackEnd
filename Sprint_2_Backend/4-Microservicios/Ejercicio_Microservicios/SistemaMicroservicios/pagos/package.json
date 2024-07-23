@@ -1,0 +1,14 @@
+{
+    "name": "microservicio-pagos",
+    "version": "1.0.0",
+    "description": "Microservicio para procesamiento de pagos",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mysql": "^2.18.1"
+    }
+  }
+  

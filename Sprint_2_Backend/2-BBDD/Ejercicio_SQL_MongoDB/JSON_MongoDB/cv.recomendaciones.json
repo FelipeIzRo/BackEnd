@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6633c2686550719d6e899d14"
+  },
+  "id_candidato": "662be359c85d52e7db935bf2",
+  "recomendador": "Javier Ortiz Laguna",
+  "entidad": "IES GasparMelchor de Jovellanos",
+  "descripcion": "Alumno muy bueno en programacón",
+  "fecha": "20-05-2023"
+}]

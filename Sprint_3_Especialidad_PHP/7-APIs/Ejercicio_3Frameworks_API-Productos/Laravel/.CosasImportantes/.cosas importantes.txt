@@ -1,0 +1,9 @@
+Desactivar Csrf para el index donde esta el formulario en la ruta
+vendor>laravel>framework>src>illuminate>Foundation>HTTP>Middleware>ValidateCsrfToken.php
+
+Desactivar Timestamps en el modelo
+
+Pedir primero el token antes de delete 
+https://www.youtube.com/watch?v=bkYbxtM2tqk
+
+migrar sino no me funciona

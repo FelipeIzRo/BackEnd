@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Productos</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Pedido de Productos</h1>
+    <form id="pedidoForm">
+        <div>
+            <label for="producto1">Producto 1:</label>
+            <input type="number" id="producto1" name="producto1" min="0" value="0">
+        </div>
+        <div>
+            <label for="producto2">Producto 2:</label>
+            <input type="number" id="producto2" name="producto2" min="0" value="0">
+        </div>
+        <div>
+            <label for="producto3">Producto 3:</label>
+            <input type="number" id="producto3" name="producto3" min="0" value="0">
+        </div>
+        <div>
+            <label for="producto4">Producto 4:</label>
+            <input type="number" id="producto4" name="producto4" min="0" value="0">
+        </div>
+        <div>
+            <label for="producto5">Producto 5:</label>
+            <input type="number" id="producto5" name="producto5" min="0" value="0">
+        </div>
+        <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+    </form>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

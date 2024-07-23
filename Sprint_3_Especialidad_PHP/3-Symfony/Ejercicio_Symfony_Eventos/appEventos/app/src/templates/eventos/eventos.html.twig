@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Eventos{% endblock %}
+
+{% block content %}
+    <h1>Lista de Eventos</h1>
+    <ul>
+        {% for evento in eventos %}
+            <li>
+                <h2>
+                    <a href="{{ path('eventos_show', {'id': evento.id}) }}">{{ evento.nombre }}</a>
+                </h2>
+            </li>
+        {% else %}
+            <li>No hay eventos disponibles.</li>
+        {% endfor %}
+        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('evento_create') }}'">Añadir Evento</button>
+    </ul>
+{% endblock %}

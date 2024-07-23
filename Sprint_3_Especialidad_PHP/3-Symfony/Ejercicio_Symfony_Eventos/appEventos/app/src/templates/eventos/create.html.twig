@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear Nuevo Evento{% endblock %}
+
+{% block content %}
+    <h1>Crear Nuevo Evento</h1>
+    <ul>
+    
+        {{ form_start(form) }}
+            <li>
+                {{ form_label(form.nombre) }}<br>
+                {{ form_widget(form.nombre) }}
+            </li>
+            <li>
+                {{ form_label(form.fecha) }}<br>
+                {{ form_widget(form.fecha) }}
+            </li>
+            <li>
+                {{ form_label(form.hora)}}<br>
+                {{ form_widget(form.hora)}}
+            </li>
+            <li>
+                {{ form_label(form.ubicacion) }}<br>
+                {{ form_widget(form.ubicacion) }}
+            </li>
+            <li>
+                {{ form_label(form.detalles) }}<br>
+                {{ form_widget(form.detalles) }}
+            </li>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('index') }}'">Volver a la lista</button>
+        {{ form_end(form) }}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+para añadir el estilo faltaba una dependencia 
+
+comando para añadirla puse esta linea en el composer.json
+
+"symfony/asset":"*"
+
+y puse el composer instal no el update que me da error

@@ -1,0 +1,20 @@
+[{
+  "_id": "php",
+  "nombre": "PHP"
+},
+{
+  "_id": "js",
+  "nombre": "JavaScript"
+},
+{
+  "_id": "sql",
+  "nombre": "SQL"
+},
+{
+  "_id": "java",
+  "nombre": "Java"
+},
+{
+  "_id": "python",
+  "nombre": "Python"
+}]

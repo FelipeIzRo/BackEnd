@@ -1,0 +1,2 @@
+El archivo phpunit.xml.dist hay que configurar la aprte de test 
+Descomentar y poner los values a las variables env

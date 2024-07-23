@@ -1,0 +1,4 @@
+Flask==3.0.0
+flask_mysqldb
+requests
+flask-cors
