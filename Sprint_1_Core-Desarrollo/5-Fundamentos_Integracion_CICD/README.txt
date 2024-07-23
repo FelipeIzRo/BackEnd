@@ -1,1 +1,0 @@
-Este repositorio esta borrado pero en el video muestro el funcionamiento
